@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --text-heading: 1.25rem;
+    --text-pararagrph: 1rem;
+    --text-span: 0.8rem;
+}
