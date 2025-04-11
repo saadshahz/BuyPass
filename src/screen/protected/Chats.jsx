@@ -10,12 +10,20 @@ export default function chats() {
 
   return (
     <section className="flex">
-      <div className="w-1/5 shadow-md">
+      <div className="w-1/5 shadow">
         <Sidebar />
       </div>
       <div className="w-4/5">
         <Header />
-        {loactionId ? <ChatDetails /> : <>Chat detail will be over here</>}
+        <div className="p-2 bg-[#f7f7fa]">
+          {loactionId ? (
+            <ChatDetails />
+          ) : (
+            <div className="flex justify-center items-center">
+              Chat detail will be over here
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

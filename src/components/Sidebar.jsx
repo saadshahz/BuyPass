@@ -50,7 +50,7 @@ export default function Sidebar() {
   };
 
   return (
-    <section className="h-[100vh] overflow-hidden">
+    <section className="h-screen bg-[#fff] overflow-hidden">
       <div className="p-4 text-[20px] text-center font-bold flex justify-center items-center h-[10vh]">
         LOGO
       </div>

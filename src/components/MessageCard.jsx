@@ -7,7 +7,7 @@ export default function MessageCard(props) {
   const { title, image_url, location, status, id, date } = { ...props };
 
   const path = useLocation();
-  console.log("pathname :", path.pathname);
+
   const getFirstLetters = (text) => {
     if (!text) return "";
     return text
@@ -19,7 +19,6 @@ export default function MessageCard(props) {
   return (
     <Link
       to={`/chats/${id}`}
-      // className={path.pathname == `/chats/${id}` ? "bg-amber-300" : null}
     >
       <div
         className={`w-full py-2 px-4 border-b-2 border-b-[#fafafa] bg-red ${

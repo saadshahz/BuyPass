@@ -1,11 +1,24 @@
 @import "tailwindcss";
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p button,
+a,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
 @theme {
   --text-heading: 1.25rem;
-  --text-subheading: 1.25rem;
-  --text-pararagrph: 1rem;
+  --text-subheading: 1.125rem;
+  --text-pararagraph: 0.8rem;
   --text-label: 0.8rem;
-  --color-input: 0.5rem;
+  --color-input: 0.75rem;
 }
 
 .chatlistingTab {
@@ -116,4 +129,12 @@
 }
 .inner-chatlistingTab .ant-tabs-tab-btn span {
   margin-left: 5px;
+}
+
+.header-search {
+  background-color: #f3f3f9 !important;
+  border: 1px solid #f3f3f9 !important;
+}
+.header-search svg {
+  fill: #9c9fac !important;
 }
