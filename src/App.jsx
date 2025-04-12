@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import MainLayout from './layout/MainLayout.jsx'
-import Applayout from './layout/Applayout.jsx'
+import Applayout from './layout/AppLayout.jsx'
 
 const App = () => {
   const { token, setToken } = useState('');
