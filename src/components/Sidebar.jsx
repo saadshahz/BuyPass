@@ -4,7 +4,9 @@ import { Tabs } from "antd";
 import ChatListing from "./ChatListing";
 import getchats from "../action/getchats";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+  const { show } = { ...props };
+
   const data = getchats();
 
   const items = [
@@ -50,7 +52,7 @@ export default function Sidebar() {
   };
 
   return (
-    <section className="h-screen bg-[#fff] overflow-hidden">
+    <section className={`h-screen bg-[#fff] w-[100%] overflow-hidden `}>
       <div className="p-4 text-[20px] text-center font-bold flex justify-center items-center h-[10vh]">
         LOGO
       </div>

@@ -25,8 +25,8 @@ export default function CustomerCard(props) {
   };
 
   return (
-    <section className="bg-[#fff] px-2 mb-2 py-4 rounded shadow">
-      <Space size={"middle"}>
+    <section className="bg-[#fff] px-2 py-4 rounded shadow">
+      <div className="flex justify-between items-center">
         {image_url ? (
           <image href={image_url} className="w-[10px] h-[10px] rounded-full " />
         ) : (
@@ -76,7 +76,7 @@ export default function CustomerCard(props) {
         <button className=" cursor-pointer">
           <ReloadIcon className={"hover:fill-green-600"} />
         </button>
-      </Space>
+      </div>
     </section>
   );
 }

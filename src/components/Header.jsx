@@ -10,24 +10,31 @@ import flag from "../assets/images/united-state.png";
 import user from "../assets/images/person.png";
 import { useLocation } from "react-router-dom";
 import ArrowRIghtIcon from "../assets/images/svgs/ArrowRIghtIcon";
+import MenuIcon from "../assets/images/svgs/MenuIcon";
 
-export default function Header() {
+export default function Header(props) {
+  const { handleMenu } = { ...props };
   const path = useLocation();
   console.log(path.pathname.includes("/chats"));
   return (
     <section className="h-[15vh] p-4 bg-[#fff] shadow ">
       <Row className="justify-between items-center ">
         <Col span={6}>
-          <Input
-            size=""
-            placeholder="Search..."
-            name="search"
-            onChange={(e) => {
-              console.log(e.target.value);
-            }}
-            className="header-search"
-            prefix={<SearchOutlined />}
-          />
+          <div className="flex items-center gap-2">
+            <button className="cursor-pointer" onClick={handleMenu}>
+              <MenuIcon />
+            </button>
+            <Input
+              size=""
+              placeholder="Search..."
+              name="search"
+              onChange={(e) => {
+                console.log(e.target.value);
+              }}
+              className="header-search"
+              prefix={<SearchOutlined />}
+            />
+          </div>
         </Col>
         <Col span={6} className="flex text-end">
           <Space size={"middle"}>
@@ -71,8 +78,10 @@ export default function Header() {
           Home{" "}
           {path.pathname.includes("/chats") ? (
             <span className="text-blue-600 flex  items-center">
-              <span className="mx-2" ><ArrowRIghtIcon fill="#155dfc"  /></span>
-              
+              <span className="mx-2">
+                <ArrowRIghtIcon fill="#155dfc" />
+              </span>
+
               {" Message Center"}
             </span>
           ) : null}

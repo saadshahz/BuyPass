@@ -139,8 +139,7 @@ li {
   fill: #9c9fac !important;
 }
 
-.order-card{
-
+.order-card {
 }
 .order-card::-webkit-scrollbar-track {
   background-color: #dedede !important;
@@ -161,6 +160,12 @@ li {
   height: 7px;
   width: 5px;
 }
-.order-card-detail .ant-card-body{
+.order-card-detail .ant-card-body {
   padding: 15px 10px !important;
+}
+.hideMenu {
+  transform: translateX(-300px);
+}
+.showMenu {
+  transform: translateX(0);
 }
