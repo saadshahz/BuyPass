@@ -60,8 +60,8 @@ export default function OrderCard() {
         />
       </div>
       <div className="h-[65vh] order-card overflow-y-scroll">
-        <div className="py-4 ">
-          <Card className="shadow-lg rounded-lg">
+        <div className=" mt-2">
+          <Card className="shadow order-card-detail  rounded">
             <div className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-[#546171]">

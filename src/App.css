@@ -161,3 +161,6 @@ li {
   height: 7px;
   width: 5px;
 }
+.order-card-detail .ant-card-body{
+  padding: 15px 10px !important;
+}
