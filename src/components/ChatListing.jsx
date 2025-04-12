@@ -20,9 +20,10 @@ export default function ChatListing(props) {
       children: (
         <>
           {data &&
-            data.map((items) => {
+            data.map((items, idx) => {
               return (
                 <MessageCard
+                  key={idx}
                   title={items.title}
                   location={items.location}
                   status={items.status}

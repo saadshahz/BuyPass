@@ -3,9 +3,10 @@ import MessageCard from "./MessageCard";
 import { Tabs } from "antd";
 import ChatListing from "./ChatListing";
 import getchats from "../action/getchats";
+import CrossIcon from "../assets/images/svgs/CrossIcon";
 
 export default function Sidebar(props) {
-  const { show } = { ...props };
+  const { show, handleToggle } = { ...props };
 
   const data = getchats();
 
@@ -52,12 +53,20 @@ export default function Sidebar(props) {
   };
 
   return (
-    <section className={`h-screen bg-[#fff] w-[100%] overflow-hidden `}>
+    <section
+      className={`h-screen sidebar-inner bg-[#fff] w-[100%] overflow-hidden `}
+    >
+      <button
+        onClick={handleToggle}
+        className="absolute top-[10px] rounded-full text-label flex justify-between items-center px-1 py-1 bg-[#dedede] right-[10px] text-white cursor-pointer close-btn"
+      >
+        <CrossIcon />
+      </button>
       <div className="p-4 text-[20px] text-center font-bold flex justify-center items-center h-[10vh]">
         LOGO
       </div>
       <div className="h-[90vh]">
-        <p className="px-4 py-2 text-label text-[#dedede]"> Message Center</p>
+        <p className="px-4 py-2 text-label text-[#dedede]">Message Center</p>
         <Tabs
           className="chatlistingTab"
           defaultActiveKey="1"

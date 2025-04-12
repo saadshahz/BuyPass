@@ -6,13 +6,11 @@ import PlusIcon from "../assets/images/svgs/PlusIcon";
 import ImageIcon from "../assets/images/svgs/ImageIcon";
 
 export default function Messages(props) {
-  const { isTab } = { ...props };
+  const { handleToggle } = { ...props };
 
   return (
     <section
-      className={`bg-[#fff] flex justify-center items-end px-2 py-4 rounded shadow-md ${
-        isTab ? "" : " h-[66vh] "
-      } `}
+      className={`message-content bg-[#fff] h-[66vh]  flex justify-center items-end px-2 py-4 rounded shadow-md`}
     >
       <div className="flex justify-between items-center w-full border-[#dedede] border-1 px-4 py-2 rounded-lg shadow">
         <input placeholder="How Can I Help You ?" />
@@ -28,9 +26,9 @@ export default function Messages(props) {
             <button>
               <MicIconc />
             </button>
-            <buton className="w-[70px] text-label text-white h-[30px] rounded flex justify-between px-2 items-center bg-blue-600">
+            <button className="w-[70px] text-label text-white h-[30px] rounded flex justify-between px-2 items-center bg-blue-600">
               <SendIcon fill="#fff" className={"rotate-45"} /> Send
-            </buton>
+            </button>
           </Space>
         </div>
       </div>

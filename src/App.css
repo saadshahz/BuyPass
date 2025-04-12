@@ -12,7 +12,11 @@ a,
 li {
   font-family: "Poppins", sans-serif;
 }
-
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 @theme {
   --text-heading: 1.25rem;
   --text-subheading: 1.125rem;
@@ -174,17 +178,133 @@ li {
   height: 100% !important;
 }
 
+.close-btn {
+  display: none;
+}
+.order-detail-btn {
+  display: none !important;
+}
+.sidebar-parent {
+}
+.sidebar-parent .sidebar-inner {
+}
+.chats-parent {
+}
+.chats-parent .header {
+}
+.chats-parent .customer-card {
+}
+.chats-parent .messages-parent {
+}
+.chats-parent .message-content {
+}
+.chats-parent .order-card {
+}
 /* Responsive Start */
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+  .sidebar-parent {
+    position: absolute;
+    left: -1200px;
+    top: 0;
+    z-index: 99999;
+    width: 400px;
+    background: red;
+    transition: 0.5s;
+  }
+  .showMenu.sidebar-parent {
+    left: 0px;
+  }
+  .chats-parent {
+    width: 100% !important;
+  }
+  .close-btn {
+    display: block;
+  }
 }
 @media (max-width: 1280px) {
 }
 @media (max-width: 1280px) and (min-width: 1024px) {
 }
 @media (max-width: 1023px) and (min-width: 992px) {
+  .header {
+    height: 17vh;
+  }
+  .customer-card {
+    height: 16vh;
+  }
+  .messages-parent {
+    height: 65vh;
+  }
+  .chats-parent .message-content {
+    height: 64vh;
+  }
+  .chats-parent .order-card {
+    height: 64vh;
+  }
 }
 @media (max-width: 991px) {
+  .header {
+    height: 13vh;
+  }
+  .customer-card {
+    height: 100vh;
+    position: absolute;
+    width: 320px;
+    top: 0;
+    right: -100%;
+    display: block;
+    transition: 0.5s;
+    z-index: 9999;
+  }
+  .customer-card section {
+    height: 100%;
+  }
+  .customer-card .customer-card-inner {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .customer-card .customer-card-inner p {
+    display: flex;
+    gap: 5;
+    padding-bottom: 10px;
+  }
+  .show-customer-card.customer-card {
+    right: 0px;
+  }
+  .messages-parent {
+    height: 85vh;
+  }
+  .chats-parent .message-content {
+    height: 85vh;
+    width: 99vw;
+  }
+  .chats-parent .order-card {
+    height: 64vh;
+  }
+  .order-detail-btn {
+    display: block !important;
+  }
+  .chats-parent .order-card {
+    position: absolute;
+    right: -200%;
+    width: 380px;
+    height: 100vh;
+    bottom: 0;
+    transition: 0.5s;
+  }
+  .cardShow.order-card {
+    right: 0;
+    bottom: 0px;
+    height: 97vh;
+    z-index: 9999;
+    padding-top: 51px;
+  }
+  .order-car-inner {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 900px) {
@@ -193,12 +313,55 @@ li {
 @media (max-width: 767px) {
 }
 @media (max-width: 577px) {
+  .chats-parent .order-card {
+    right: -360%;
+  }
+  .cardShow.order-card {
+    right: 0;
+    bottom: 0px;
+    height: 97vh;
+    z-index: 9999;
+    padding-top: 51px;
+  }
+}
+@media (max-width: 490px) {
+  .customer-card {
+    width: 320px;
+
+  }
 }
 @media (max-width: 470px) {
 }
+@media (max-width: 390px) {
+  .customer-card {
+    width: 320px;
+  }}
 @media (max-width: 375px) {
+  .customer-card {
+    width: 80%;
+  }
+  .chats-parent .order-card {
+    right: -470%;
+  }
+  .cardShow.order-card {
+    right: 0;
+    bottom: 0px;
+    height: 97vh;
+    z-index: 9999;
+    padding-top: 51px;
+  }
 }
 @media (max-width: 320px) {
+  .chats-parent .order-card {
+    right: -540%;
+  }
+  .cardShow.order-card {
+    right: 0;
+    bottom: 0px;
+    height: 97vh;
+    z-index: 9999;
+    padding-top: 51px;
+  }
 }
 
 /* Responsive End */

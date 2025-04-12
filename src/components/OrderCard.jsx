@@ -9,10 +9,10 @@ import {
 } from "@ant-design/icons";
 import productImage from "../assets/images/product-image.jpg";
 import BuildingIcon from "../assets/images/svgs/BuildingIcon";
+import CrossIcon from "../assets/images/svgs/CrossIcon";
 
 export default function OrderCard(props) {
-  const { isTab } = { ...props };
-
+  const { isShow, handleToggle } = { ...props };
   const orderDetails = {
     orderId: "12345676789",
     productName: "Retrograph-Espresso",
@@ -49,10 +49,16 @@ export default function OrderCard(props) {
   ];
   return (
     <section
-      className={`bg-[#fff] overflow-hidden px-2 py-4 rounded shadow ${
-        isTab ? "" : " h-[66vh] "
+      className={`order-card bg-[#fff] h-[66vh] overflow-hidden px-2 py-4 rounded shadow ${
+        isShow ? "cardShow" : ""
       } `}
     >
+      <button
+        onClick={handleToggle}
+        className="absolute top-[15px] rounded-full text-label flex justify-between items-center px-1 py-1 bg-[#dedede] right-[10px] text-black cursor-pointer close-btn"
+      >
+        <CrossIcon />
+      </button>
       <div>
         <Input
           size=""
@@ -65,11 +71,7 @@ export default function OrderCard(props) {
           prefix={<SearchOutlined />}
         />
       </div>
-      <div
-        className={`order-card overflow-y-scroll ${
-          isTab ? "" : " h-[65vh] "
-        }`}
-      >
+      <div className={`order-car-inner d h-[65vh] overflow-y-scroll `}>
         <div className=" mt-2">
           <Card className="shadow order-card-detail  rounded">
             <div className="mb-6">

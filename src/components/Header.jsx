@@ -15,11 +15,10 @@ import MenuIcon from "../assets/images/svgs/MenuIcon";
 export default function Header(props) {
   const { handleMenu } = { ...props };
   const path = useLocation();
-  console.log(path.pathname.includes("/chats"));
   return (
-    <section className="h-[15vh] p-4 bg-[#fff] shadow ">
+    <section className=" header h-[15vh] p-4 bg-[#fff] shadow ">
       <Row className="justify-between items-center ">
-        <Col span={6}>
+        <Col span={8}>
           <div className="flex items-center gap-2">
             <button className="cursor-pointer" onClick={handleMenu}>
               <MenuIcon />
@@ -36,7 +35,7 @@ export default function Header(props) {
             />
           </div>
         </Col>
-        <Col span={6} className="flex text-end">
+        <Col className="flex text-end">
           <Space size={"middle"}>
             <div>
               <img src={flag} className="w-[30px] h-[20px] rounded" />

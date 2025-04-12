@@ -4,6 +4,7 @@ import WhatsappIcon from "../assets/images/svgs/WhatsappIcon";
 import PhoneIcon from "../assets/images/svgs/PhoneIcon";
 import TrashIcon from "../assets/images/svgs/TrashIcon";
 import ReloadIcon from "../assets/images/svgs/ReloadIcon";
+import CrossIcon from "../assets/images/svgs/CrossIcon";
 
 export default function CustomerCard(props) {
   const {
@@ -14,6 +15,7 @@ export default function CustomerCard(props) {
     purchased,
     lifetime,
     phone,
+    handleToggle,
   } = { ...props };
 
   const getFirstLetters = (text) => {
@@ -25,8 +27,14 @@ export default function CustomerCard(props) {
   };
 
   return (
-    <section className="bg-[#fff] px-2 py-4 rounded shadow">
-      <div className="flex justify-between items-center">
+    <section className=" bg-[#fff] px-2 py-4 rounded shadow">
+      <button
+        onClick={handleToggle}
+        className="absolute top-[10px] rounded-full text-label flex justify-between items-center px-1 py-1 bg-[#dedede] right-[10px] text-white cursor-pointer close-btn"
+      >
+        <CrossIcon />
+      </button>
+      <div className="customer-card-inner flex justify-between items-center">
         {image_url ? (
           <image href={image_url} className="w-[10px] h-[10px] rounded-full " />
         ) : (
@@ -57,25 +65,29 @@ export default function CustomerCard(props) {
             <span className="text-[#546171]">Lifetime: </span> {lifetime}
           </p>
         </div>
-        <div className="bg-green-400 p-2 rounded-full ">
-          <WhatsappIcon fill="#FFF" />
+        <div className=" call flex items-center justify-between ">
+          <div className="bg-green-400 p-2 rounded-full ">
+            <WhatsappIcon fill="#FFF" />
+          </div>
+          <div className="bg-blue-500 p-2 rounded-full ">
+            <PhoneIcon fill="#FFF" />
+          </div>
+          <div>
+            <span className="text-label text-[#546171]">Call: </span>
+            <p className="text-[0.8rem] font-semibold">{phone}</p>
+          </div>
         </div>
-        <div className="bg-blue-500 p-2 rounded-full ">
-          <PhoneIcon fill="#FFF" />
+        <div className=" call flex items-center justify-between ">
+          <button className="text-[0.7em] border-1 py-1 px-2 rounded-md text-[#0877ff] border-[#0877ff] hover:bg-[#0877ff] hover:text-[#fff] cursor-pointer">
+            Order History
+          </button>
+          <button className=" cursor-pointer">
+            <TrashIcon className={"hover:fill-red-600"} />
+          </button>
+          <button className=" cursor-pointer">
+            <ReloadIcon className={"hover:fill-green-600"} />
+          </button>
         </div>
-        <div>
-          <span className="text-label text-[#546171]">Call: </span>
-          <p className="text-[0.8rem] font-semibold">{phone}</p>
-        </div>
-        <button className="text-[0.7em] border-1 py-1 px-2 rounded-md text-[#0877ff] border-[#0877ff] hover:bg-[#0877ff] hover:text-[#fff] cursor-pointer">
-          Order History
-        </button>
-        <button className=" cursor-pointer">
-          <TrashIcon className={"hover:fill-red-600"} />
-        </button>
-        <button className=" cursor-pointer">
-          <ReloadIcon className={"hover:fill-green-600"} />
-        </button>
       </div>
     </section>
   );
