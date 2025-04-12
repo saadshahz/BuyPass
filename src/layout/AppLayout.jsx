@@ -1,8 +1,14 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Chats from '../screen/protected/Chats.jsx';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import Chats from "../screen/protected/Chats.jsx";
 
-export default function Applayout() {
+const Applayout = () => {
   return (
     <>
       <Routes>
@@ -12,6 +18,6 @@ export default function Applayout() {
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
-
-  )
-}
+  );
+};
+export default Applayout;

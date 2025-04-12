@@ -15,7 +15,7 @@ export default function Header() {
   const path = useLocation();
   console.log(path.pathname.includes("/chats"));
   return (
-    <section className="p-4 bg-[#fff] shadow ">
+    <section className="h-[15vh] p-4 bg-[#fff] shadow ">
       <Row className="justify-between items-center ">
         <Col span={6}>
           <Input

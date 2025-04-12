@@ -18,7 +18,7 @@ li {
   --text-subheading: 1.125rem;
   --text-pararagraph: 0.8rem;
   --text-label: 0.8rem;
-  --color-input: 0.75rem;
+  --color-Input: 0.75rem;
 }
 
 .chatlistingTab {
@@ -137,4 +137,27 @@ li {
 }
 .header-search svg {
   fill: #9c9fac !important;
+}
+
+.order-card{
+
+}
+.order-card::-webkit-scrollbar-track {
+  background-color: #dedede !important;
+  height: 6px;
+  border-radius: 30px !important;
+  height: 100vh !important;
+}
+.order-card::-webkit-scrollbar {
+  width: 5px;
+  /* padding-left: 10px; */
+
+  position: absolute;
+  right: 0;
+}
+.order-card::-webkit-scrollbar-thumb {
+  background-color: #0877ff !important;
+  border-radius: 20px;
+  height: 7px;
+  width: 5px;
 }

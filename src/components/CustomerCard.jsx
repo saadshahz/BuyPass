@@ -25,7 +25,7 @@ export default function CustomerCard(props) {
   };
 
   return (
-    <section className="bg-[#fff] px-2 py-4 rounded shadow">
+    <section className="bg-[#fff] px-2 mb-2 py-4 rounded shadow">
       <Space size={"middle"}>
         {image_url ? (
           <image href={image_url} className="w-[10px] h-[10px] rounded-full " />
@@ -63,8 +63,11 @@ export default function CustomerCard(props) {
         <div className="bg-blue-500 p-2 rounded-full ">
           <PhoneIcon fill="#FFF" />
         </div>
-        <p className="text-paragraph font-semibold">{phone}</p>
-        <button className="text-input border-1 py-1 px-2 rounded-md text-[#0877ff] border-[#0877ff] hover:bg-[#0877ff] hover:text-[#fff] cursor-pointer">
+        <div>
+          <span className="text-label text-[#546171]">Call: </span>
+          <p className="text-[0.8rem] font-semibold">{phone}</p>
+        </div>
+        <button className="text-[0.7em] border-1 py-1 px-2 rounded-md text-[#0877ff] border-[#0877ff] hover:bg-[#0877ff] hover:text-[#fff] cursor-pointer">
           Order History
         </button>
         <button className=" cursor-pointer">
