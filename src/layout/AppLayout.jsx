@@ -6,17 +6,20 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+
 import Chats from "../screen/protected/Chats.jsx";
 
 const Applayout = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Chats />} />
-        <Route path="/chats" element={<Chats />} />
-        <Route path="/chats/:id" element={<Chats />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Chats />} />
+          <Route path="/chats" element={<Chats />} />
+          <Route path="/chats/:id" element={<Chats />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </Router>
     </>
   );
 };

@@ -19,7 +19,7 @@ export default function chats() {
           {loactionId ? (
             <ChatDetails />
           ) : (
-            <div className="flex justify-center items-center">
+            <div className="h-[80vh] text-heading font-bold flex justify-center items-center">
               Chat detail will be over here
             </div>
           )}
