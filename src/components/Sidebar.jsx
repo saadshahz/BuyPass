@@ -1,7 +1,7 @@
 import React from "react";
 import MessageCard from "./MessageCard";
 import { Tabs } from "antd";
-import ChatListing from "./chatListing";
+import ChatListing from "./ChatListing";
 import getchats from "../action/getchats";
 
 export default function Sidebar() {
