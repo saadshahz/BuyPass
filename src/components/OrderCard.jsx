@@ -10,7 +10,9 @@ import {
 import productImage from "../assets/images/product-image.jpg";
 import BuildingIcon from "../assets/images/svgs/BuildingIcon";
 
-export default function OrderCard() {
+export default function OrderCard(props) {
+  const { isTab } = { ...props };
+
   const orderDetails = {
     orderId: "12345676789",
     productName: "Retrograph-Espresso",
@@ -46,7 +48,11 @@ export default function OrderCard() {
     },
   ];
   return (
-    <section className="bg-[#fff] h-[66vh] overflow-hidden px-2 py-4 rounded shadow">
+    <section
+      className={`bg-[#fff] overflow-hidden px-2 py-4 rounded shadow ${
+        isTab ? "" : " h-[66vh] "
+      } `}
+    >
       <div>
         <Input
           size=""
@@ -59,7 +65,11 @@ export default function OrderCard() {
           prefix={<SearchOutlined />}
         />
       </div>
-      <div className="h-[65vh] order-card overflow-y-scroll">
+      <div
+        className={`order-card overflow-y-scroll ${
+          isTab ? "" : " h-[65vh] "
+        }`}
+      >
         <div className=" mt-2">
           <Card className="shadow order-card-detail  rounded">
             <div className="mb-6">
@@ -105,13 +115,6 @@ export default function OrderCard() {
                 Video Proof Uploaded
               </div>
             )}
-            {/* 
-          <div className="mb-4">
-            <div className="flex justify-between mb-1">
-              <span className="font-medium">Logistic partner</span>
-              <span>{orderDetails.logisticPartner}</span>
-            </div>
-          </div> */}
 
             <div className="mb-6 relative">
               <Progress
@@ -122,9 +125,12 @@ export default function OrderCard() {
 
               <div className="absolute top-[-25px] w-full flex justify-between mt-4">
                 {statusSteps.map((step, index) => (
-                  <div key={index} className="text-center">
+                  <div
+                    key={index}
+                    className="text-center flex flex-col items-center"
+                  >
                     <div
-                      className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center 
+                      className={`w-10 h-10 rounded-full flex items-center justify-center 
                   ${
                     index * 25 <= orderDetails.progress
                       ? "bg-blue-500 text-white text-[0.8rem]"

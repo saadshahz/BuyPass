@@ -169,3 +169,36 @@ li {
 .showMenu {
   transform: translateX(0);
 }
+.mobile-measage-content {
+  flex-flow: column-reverse !important;
+  height: 100% !important;
+}
+
+/* Responsive Start */
+
+@media (min-width: 1200px) {
+}
+@media (max-width: 1280px) {
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+}
+@media (max-width: 1023px) and (min-width: 992px) {
+}
+@media (max-width: 991px) {
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 767px) {
+}
+@media (max-width: 577px) {
+}
+@media (max-width: 470px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
+
+/* Responsive End */
