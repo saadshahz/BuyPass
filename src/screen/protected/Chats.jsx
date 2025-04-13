@@ -14,13 +14,12 @@ export default function chats() {
   };
 
   useEffect(() => {
-    if (window.innerWidth <= 1200 ) {
-      console.log('askakc')
+    if (window.innerWidth <= 1200) {
       setIsMenu(false);
     }
   }, []);
-  console.log("isMenu :",isMenu)
-  console.log("window.innerWidth :",window.innerWidth <= 1200)
+  console.log("isMenu :", isMenu);
+  console.log("window.innerWidth :", window.innerWidth <= 1200);
   return (
     <section className="flex justify-between">
       <div

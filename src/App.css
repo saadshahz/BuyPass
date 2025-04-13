@@ -177,7 +177,9 @@ body {
   flex-flow: column-reverse !important;
   height: 100% !important;
 }
-
+.header-btn {
+  display: none;
+}
 .close-btn {
   display: none;
 }
@@ -273,6 +275,10 @@ body {
   }
   .show-customer-card.customer-card {
     right: 0px;
+    padding: 10px;
+  }
+  .show-customer-card .customer-card-outer-inner {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .messages-parent {
     height: 85vh;
@@ -308,13 +314,58 @@ body {
 }
 
 @media (max-width: 900px) {
+  .header {
+    height: 15vh;
+  }
 }
 
 @media (max-width: 767px) {
+  .header {
+    height: 17vh;
+  }
 }
 @media (max-width: 577px) {
+  .header .header-search-section.ant-col-8 {
+    width: 80% !important;
+  }
+  .header-btn {
+    display: block;
+  }
+  .header .header-menu-section {
+    position: absolute;
+    right: -100%;
+    top: 10px;
+    transition: 0.5s;
+    top: 20%;
+  }
+  .header .show-menu.header-menu-section {
+    right: 0;
+    
+  }
+  .header .show-menu .header-menu-section-inner {
+    width: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    z-index: 9999;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+  .header .show-menu .header-menu-section-inner div {
+    text-align: justify;
+  }
+
   .chats-parent .order-card {
     right: -360%;
+  }
+  .header {
+    height: 15vh;
+  }
+  .header .bread-crum {
+    padding: 10px 0;
   }
   .cardShow.order-card {
     right: 0;
@@ -322,20 +373,33 @@ body {
     height: 97vh;
     z-index: 9999;
     padding-top: 51px;
+    width: 60vw;
+    margin: 18px 0;
+  }
+  .showMenu.sidebar-parent {
+    width: 100vw;
   }
 }
 @media (max-width: 490px) {
   .customer-card {
     width: 320px;
-
   }
 }
 @media (max-width: 470px) {
 }
+@media (max-width: 400px) {
+  .showMenu.sidebar-parent {
+    width: 100vw;
+  }
+}
 @media (max-width: 390px) {
   .customer-card {
     width: 320px;
-  }}
+  }
+  .cardShow.order-card {
+    width: 80vw;
+  }
+}
 @media (max-width: 375px) {
   .customer-card {
     width: 80%;

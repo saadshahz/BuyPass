@@ -27,10 +27,10 @@ export default function CustomerCard(props) {
   };
 
   return (
-    <section className=" bg-[#fff] px-2 py-4 rounded shadow">
+    <section className="customer-card-outer-inner bg-[#fff] px-2 py-4 rounded shadow">
       <button
         onClick={handleToggle}
-        className="absolute top-[10px] rounded-full text-label flex justify-between items-center px-1 py-1 bg-[#dedede] right-[10px] text-white cursor-pointer close-btn"
+        className="absolute top-[15px] rounded-full text-label flex justify-between items-center px-1 py-1 bg-[#dedede] right-[15px] text-white cursor-pointer close-btn"
       >
         <CrossIcon />
       </button>
