@@ -12,7 +12,8 @@ a,
 li {
   font-family: "Poppins", sans-serif;
 }
-body {
+body,
+html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -257,6 +258,7 @@ body {
     display: block;
     transition: 0.5s;
     z-index: 9999;
+    display: none;
   }
   .customer-card section {
     height: 100%;
@@ -273,6 +275,7 @@ body {
     padding-bottom: 10px;
   }
   .show-customer-card.customer-card {
+    display: block;
     right: 0px;
     padding: 10px;
   }
@@ -282,9 +285,12 @@ body {
   .messages-parent {
     height: 85vh;
   }
+  .messages-parent .ant-col-16{
+    width: 100%;
+  }
   .chats-parent .message-content {
     height: 85vh;
-    width: 99vw;
+    width: 98vw;
   }
   .chats-parent .order-card {
     height: 64vh;
