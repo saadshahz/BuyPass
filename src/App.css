@@ -285,7 +285,7 @@ html {
   .messages-parent {
     height: 85vh;
   }
-  .messages-parent .ant-col-16{
+  .messages-parent .ant-col-16 {
     width: 100%;
   }
   .chats-parent .message-content {
@@ -336,15 +336,24 @@ html {
   .header-btn {
     display: block;
   }
+  .chats-parent .message-content {
+    height: 100%;
+    width: 97vw;
+  }
   .header .header-menu-section {
     position: absolute;
     right: -100%;
     top: 10px;
     transition: 0.5s;
     top: 20%;
+    display: none;
   }
   .header .show-menu.header-menu-section {
     right: 10px;
+    display: flex;
+  }
+  .messages-parent {
+    height: 80vh;
   }
   .header .show-menu .header-menu-section-inner {
     width: 50px;
@@ -374,7 +383,7 @@ html {
   .cardShow.order-card {
     right: 0;
     bottom: 0px;
-    height: 97vh;
+    height: 90vh;
     z-index: 9999;
     padding-top: 51px;
     width: 60vw;
@@ -395,6 +404,9 @@ html {
   .showMenu.sidebar-parent {
     width: 100vw;
   }
+  .cardShow.order-card {
+    width: 70vw;
+  }
 }
 @media (max-width: 390px) {
   .customer-card {
@@ -402,6 +414,14 @@ html {
   }
   .cardShow.order-card {
     width: 80vw;
+  }
+  .send-btn span {
+    display: none;
+  }
+  .send-btn {
+    width: auto;
+    padding: 15px 10px 15px 6px;
+    border-radius: 50%;
   }
 }
 @media (max-width: 375px) {

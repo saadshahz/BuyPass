@@ -26,8 +26,8 @@ export default function Messages(props) {
             <button>
               <MicIconc />
             </button>
-            <button className="w-[70px] text-label text-white h-[30px] rounded flex justify-between px-2 items-center bg-blue-600">
-              <SendIcon fill="#fff" className={"rotate-45"} /> Send
+            <button className="send-btn w-[70px] text-label text-white h-[30px] rounded flex justify-between px-2 items-center bg-blue-600">
+              <SendIcon fill="#fff" className={"rotate-45"} /> <span>Send</span>
             </button>
           </Space>
         </div>
